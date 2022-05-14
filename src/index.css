@@ -1,0 +1,224 @@
+:root {
+  --twitter-color: #1da1f2;
+  --twitter-color-hover: #188dd6;
+  --soft-grey: #ebebeb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#left-row {
+  background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+link:hover {
+  text-decoration: underline;
+}
+
+.text-x-small {
+  font-size: x-small;
+}
+
+#btn-register {
+  margin-top: 3rem;
+}
+
+.btn-sideBarLeft:hover {
+  background-color: #e7e7e7;
+}
+
+#Twittear-SideBarLeft {
+  background-color: var(--twitter-color);
+  color: white;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.bg-twitter {
+  background-color: var(--twitter-color);
+}
+
+#Twittear-SideBarLeft:hover {
+  background-color: var(--twitter-color-hover);
+}
+
+#tweet,
+#floatingTextAreaDescription {
+  resize: none;
+  overflow: hidden;
+  line-height: 1.1rem;
+}
+
+#tweet:focus,
+#tweet:active {
+  outline: none;
+}
+
+#center-col {
+  border-left: 1px solid var(--soft-grey);
+  border-right: 1px solid var(--soft-grey);
+}
+
+.input-group {
+  background-color: rgb(118, 118, 118);
+}
+
+#input-search {
+  background-color: transparent;
+}
+
+#searchInput {
+  border-radius: 0 100px 100px 0;
+}
+
+.tendencias {
+  font-size: 20px;
+}
+
+.info-tendencias {
+  color: #727272;
+}
+
+.tt-link {
+  color: var(--twitter-color);
+  text-decoration: none;
+}
+.tt-link:hover {
+  color: var(--twitter-color);
+}
+
+.lsit-group:hover {
+  background-color: #e7e7e7;
+}
+
+.user-suggestion {
+  text-decoration: none;
+}
+.user-suggestion:hover {
+  text-decoration: underline;
+}
+
+#tweet-three-dots {
+  height: 30px;
+  width: 30px;
+}
+
+.dropstart .dropdown-toggle::before,
+.dropup .dropdown-toggle::after {
+  content: none;
+}
+
+#dropdown-tweet:hover {
+  background-color: rgb(226, 250, 255);
+}
+
+#dropdown-tweet:active,
+#dropdown-tweet:focus,
+#dropdown-profile:active,
+#dropdown-profile:focus,
+#profile-link:active,
+#profile-link:focus {
+  box-shadow: none;
+}
+
+#tweet-three-dots:active,
+#tweet-three-dots:focus {
+  background-color: var(--soft-grey);
+  outline: none;
+}
+
+#tweet-three-dots::after {
+  display: none;
+}
+
+.tweet-header > a {
+  text-decoration: none;
+}
+
+.tweet-footer > i {
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#arrowProfile2 {
+  height: 35px;
+  width: 35px;
+}
+
+#arrowProfile {
+  font-size: 2rem;
+}
+
+#profile-img {
+  bottom: -290px;
+  left: 30px;
+}
+.header-opacity {
+  opacity: 96.5%;
+}
+
+.--fs-7 {
+  font-size: 0.8rem;
+}
+
+.hover-light:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+/* #trend-containter,*/
+#suggested-follow {
+  border-radius: 16px;
+} 
+
+.rounded-4 {
+  border-radius: 16px;
+}
+
+.--img-circle-fit {
+  object-fit: cover;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .sideBarLeft-text {
+    display: none;
+  }
+  #Twittear-SideBarLeft {
+    display: none;
+  }
+  #Profile-SideBarLeft {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #right-col {
+    display: none;
+  }
+  #left-col {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 469px) {
+  #center-col {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .followSuggestion{
+    display: none
+  }
+  }
