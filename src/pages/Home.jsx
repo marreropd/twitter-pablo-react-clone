@@ -30,7 +30,7 @@ function Home() {
     try {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/profile/${username}`,
+        url: `http://twitter-api.vercel.app/profile/${username}`,
         // headers: { Authorization: `Bearer ${store.user.accessToken}` },
       });
       response && setUserData(response.data[0]);
@@ -48,7 +48,7 @@ function Home() {
     try {
       const response = await axios({
         method: "GET",
-        url: "http://localhost:8000/tweets",
+        url: "http://twitter-api.vercel.app/tweets",
         headers: { Authorization: `Bearer ${store.user.accessToken}` },
       });
       // setTweetsList(response.data);

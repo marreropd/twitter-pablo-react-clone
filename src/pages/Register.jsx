@@ -18,7 +18,7 @@ function Register() {
     try {
       const response = await axios({
         method: "POST",
-        url: "http://localhost:8000/users",
+        url: "http://twitter-api.vercel.app/users",
         data: {
           firstname: firstname,
           lastname: lastname,
@@ -29,7 +29,7 @@ function Register() {
           description: description,
         },
       });
-            console.log(response.data);
+      console.log(response.data);
       // setUser([...user, response.data])
     } catch (error) {
       console.log("Error: ", error);

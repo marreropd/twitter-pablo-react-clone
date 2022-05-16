@@ -15,7 +15,7 @@ function CreateTweet({ userData }) {
     try {
       const response = await axios({
         method: "POST",
-        url: "http://localhost:8000/tweets",
+        url: "http://twitter-api.vercel.app/tweets",
         headers: { Authorization: `Bearer ${store.user.accessToken}` },
         data: {
           tweet: tweetInput,

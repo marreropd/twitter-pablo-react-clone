@@ -19,7 +19,7 @@ function Login() {
     try {
       const response = await axios({
         method: "POST",
-        url: "http://localhost:8000/tokens",
+        url: "http://twitter-api.vercel.app/tokens",
         data: {
           email: email,
           password: password,

@@ -24,7 +24,7 @@ function Following({}) {
     try {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/profile/${username}`,
+        url: `http://twitter-api.vercel.app/profile/${username}`,
         // headers: { Authorization: `Bearer ${store.user.accessToken}` },
       });
       response && setUserData(response.data[0]);
@@ -38,7 +38,7 @@ function Following({}) {
       console.log(params.username);
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/profile/following/${params.username}`,
+        url: `http://twitter-api.vercel.app/profile/following/${params.username}`,
         headers: { Authorization: `Bearer ${store.user.accessToken}` },
       });
       response && setFollowing(response.data);

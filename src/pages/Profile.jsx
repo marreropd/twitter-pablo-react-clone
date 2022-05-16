@@ -38,7 +38,7 @@ function Profile() {
     try {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/profile/${params.username}`,
+        url: `http://twitter-api.vercel.app/profile/${params.username}`,
         headers: { Authorization: `Bearer ${store.user.accessToken}` },
       });
 
@@ -53,7 +53,7 @@ function Profile() {
     try {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/profile/${username}`,
+        url: `http://twitter-api.vercel.app/profile/${username}`,
         // headers: { Authorization: `Bearer ${store.user.accessToken}` },
       });
       response && setUserData(response.data[0]);
@@ -67,7 +67,7 @@ function Profile() {
     try {
       const response = await axios({
         method: "POST",
-        url: `http://localhost:8000/user/follow/${params.username}`,
+        url: `http://twitter-api.vercel.app/user/follow/${params.username}`,
         headers: { Authorization: `Bearer ${store.user.accessToken}` },
       });
     } catch (error) {
