@@ -18,7 +18,7 @@ function Register() {
     try {
       const response = await axios({
         method: "POST",
-        url: "http://twitter-api.vercel.app/users",
+        url: "https://twitter-api.vercel.app/users",
         data: {
           firstname: firstname,
           lastname: lastname,
