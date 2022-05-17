@@ -22,7 +22,7 @@ function Tweet({ tweet, i, currentUser, userData }) {
     try {
       const response = await axios({
         method: "POST",
-        url: `https://twitter-api.vercel.app/like/tweet/${tweetId}`,
+        url: `https://twitter-api-opal.vercel.app/like/tweet/${tweetId}`,
         headers: { Authorization: `Bearer ${store.user.accessToken}` },
       });
     } catch (error) {

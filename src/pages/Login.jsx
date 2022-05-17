@@ -19,7 +19,7 @@ function Login() {
     try {
       const response = await axios({
         method: "POST",
-        url: "https://twitter-api.vercel.app/tokens",
+        url: "https://twitter-api-opal.vercel.app/tokens",
         data: {
           email: email,
           password: password,
