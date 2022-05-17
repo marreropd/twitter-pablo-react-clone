@@ -1,7 +1,6 @@
 function tweetReducer(state = [], action) {
   switch (action.type) {
     case "STORE_TWEETS":
-      console.log(action.payload);
       return action.payload;
     case "CREATE":
       return [action.payload, ...state];
