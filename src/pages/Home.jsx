@@ -48,7 +48,7 @@ function Home() {
     try {
       const response = await axios({
         method: "GET",
-        url: "https://twitter-api.vercel.app/tweets",
+        url: "https://twitter-api-opal.vercel.app/tweets",
         headers: { Authorization: `Bearer ${store.user.accessToken}` },
       });
       // setTweetsList(response.data);
