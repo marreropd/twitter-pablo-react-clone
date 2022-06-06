@@ -1,0 +1,12 @@
+#open-offcanvas{
+    display: none;
+}
+
+@media screen and (max-width: 991px) { 
+    #open-offcanvas{
+        display: block;
+    }
+    #link-to-profile{
+        display: none;
+    }
+ }

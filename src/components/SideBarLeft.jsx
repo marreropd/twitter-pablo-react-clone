@@ -3,16 +3,15 @@ import { Navigate, Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { Dropdown } from "react-bootstrap";
-import axios from "axios";
 
 function SideBarLeft({ userData }) {
   const store = useSelector((state) => state);
+  const dispatch = useDispatch();
   const handleClick = async (e) => {
     dispatch({ type: "LOG_OUT" });
     <Navigate to="/login" />;
   };
 
-  const dispatch = useDispatch();
   return (
     <div className="d-flex flex-column ms-4 sticky-top">
       <div className="d-flex ms-3 mt-2">
@@ -289,80 +288,6 @@ function SideBarLeft({ userData }) {
           </Dropdown.Menu>
         </Dropdown>
       </div>
-      {/* <div id="Profile-SideBarLeft" className="pt-2 mt-3">
-        <Link
-          className="btn rounded-pill align-items-end btn-sideBarLeft"
-          to="#"
-        >
-          <div className="d-flex flex-shrink-0">
-            <img
-              className="rounded-circle --img-circle-fit"
-              src="= user.avatar "
-              height="48"
-              width="48"
-              alt="..."
-            />
-            <div className="d-flex flex-column tex-center align-items-start ms-2">
-              <p className="m-0 fw-bold">user.firstname user.lastname </p>
-              <p className="ms-0"> user.username </p>
-            </div>
-          </div>
-        </Link>
-
-        <Link
-          className="btn rounded-pill align-items-end btn-sideBarLeft"
-          to="#"
-        >
-          <div className="d-flex flex-shrink-0">
-            <img
-              className="rounded-circle --img-circle-fit"
-              src="= user.avatar "
-              height="48"
-              width="48"
-              alt="..."
-            />
-            <div className="d-flex flex-column tex-center align-items-start ms-2">
-              <p className="m-0 fw-bold">user.firstname user.lastname </p>
-              <p className="ms-0"> user.username </p>
-            </div>
-          </div>
-        </Link>
-        <ul className="dropdown-menu rounded-3 shadow py-3">
-          <li>
-            <div className="d-flex flex-shrink-0 ms-2 mb-0">
-              <img
-                className="rounded-circle --img-circle-fit"
-                src="user.avatar"
-                height="48"
-                width="48"
-                alt="user avatar"
-              />
-              <div className="d-flex flex-column tex-center align-items-start ms-2 mb-0">
-                <p className="m-0 fw-bold"> user.firstname user.lastname </p>
-                <p className="ms-0">user.username</p>
-              </div>
-            </div>
-            <hr className="mt-0" />
-          </li>
-          <li>
-            <a className="dropdown-item mb-0" href="#">
-              <p>Agregar una cuenta existente</p>
-            </a>
-          </li>
-
-          <li>
-            <a className="dropdown-item mb-0" href="/logout">
-              <p>Cerrar la sesión de user . username </p>
-            </a>
-          </li>
-        </ul>
-        <button
-          className="btn btn-primary"
-          onClick={() => dispatch({ type: "LOG_OUT" })}
-        >
-          Log Out
-        </button>
-      </div> */}
     </div>
   );
 }
