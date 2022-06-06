@@ -7,6 +7,7 @@ import tweetActions from "../redux/tweetActions";
 
 import { useDispatch, useSelector } from "react-redux";
 import SideBarRight from "../components/SideBarRight";
+import NavBarHome from "../components/NavBarHome/NavBarHome";
 
 function Home() {
   // const userStore = useSelector((state) => state.user);
@@ -67,17 +68,7 @@ function Home() {
         </div>
 
         <div id="center-col" className="col-lg-5 bg-white">
-          <header className="d-flex navbar sticky-top navbar-light bg-white justify-content-start header-opacity">
-            <div className="d-flex align-items-center justify-content-between py-0 px-0 ms-3 w-100">
-              <a
-                href="/home"
-                className="h4 text-decoration-none text-dark py-2"
-              >
-                Inicio
-              </a>
-              <i className="bi bi-stars fs-4 me-3"></i>
-            </div>
-          </header>
+          <NavBarHome userData={userData} />
           <CreateTweet userData={userData} />
           {store.tweets.map((tweet, i, userData) => (
             <Tweet key={tweet._id} tweet={tweet} i={i} />
